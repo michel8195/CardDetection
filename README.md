@@ -1,7 +1,8 @@
 # CardDetection
-´´´
+
+```
 conda create -n venv pip python==3.6
-´´´
+```
 
 source activate venv
 
