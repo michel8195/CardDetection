@@ -1,5 +1,7 @@
 # CardDetection
 
+![GitHub Logo](./react.png)
+
 - [Installation](#Installation)
 
 - [Generate dataset](#generate-dataset)
