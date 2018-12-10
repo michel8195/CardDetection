@@ -1,7 +1,8 @@
 # CardDetection
 
 - [Installation](#Installation)
-- [Generate dataset](#heading)
+
+- [Generate dataset](#Generate Dataset)
   * [Make videos with changing light conditions](#sub-heading)
   * [Extract several frames for each card](#sub-heading)
     + [Sub-sub-heading](#sub-sub-heading)
