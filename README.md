@@ -6,7 +6,7 @@
   * [Make videos with changing light conditions](#generate-dataset)
   * [Extract several frames for each card](#sub-heading)
     + [Sub-sub-heading](#sub-sub-heading)
-- [Heading](#heading-1)
+- [Training](#training)
   * [Sub-heading](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-1)
 - [Heading](#heading-2)
@@ -54,27 +54,27 @@ source .bashrc
 ## Generate dataset <a name="generate-dataset"></a>
 
 
-  ### 1.1- Make videos with changing light conditions
+  ### 1.1- Make videos with changing light conditions <a name="generate-dataset"></a>
 
 In order to generate a useful dataset, we need a big amount of representative data.  Hence, one approach to this is to make videos for each card while changing light conditions. Then, we can quickly generate several pictures for each card.  
 
-  ### 1.2- Extract card image for each frame
+  ### 1.2- Extract card image for each frame <a name="generate-dataset"></a>
   
 To make the images more realistic, we have to change the background. We extract the card pixels from each image using Opencv.
 
-  ### 1.3- Download differents backgrounds
+  ### 1.3- Download differents backgrounds <a name="generate-dataset"></a>
   
 We download different background from the web
 
-  ### 1.4- Apply image transformations to each cards and put it randomly in randomly backgrounds
+  ### 1.4- Apply image transformations to each cards and put it randomly in randomly backgrounds <a name="generate-dataset"></a>
 
 We apply transformations such as traslation, rotation, perspective change, size and noise to each images. Then we choose randomly some images and one background and put it together
 
-## 2- Training
+## 2- Training <a name="training"></a>
 For train the model we use Tensorflow Object Detection API. 
 With the images and their corresponding labels we genearte a .record file.
 
-  ### 2.1 Select proper model, depending in the application 
+  ### 2.1 Select proper model, depending in the application  <a name="generate-dataset"></a>
   
 Once we have .record file we are ready to select a model. 
 All the official tensorflow model are listed in the [zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
