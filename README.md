@@ -12,7 +12,7 @@
   * [Sub-heading](#sub-heading-2)
     + [Sub-sub-heading](#sub-sub-heading-2)
 
-## Installation
+# Installation
 
 First we create a virtual environment with conda 
 ```
