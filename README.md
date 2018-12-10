@@ -5,9 +5,12 @@
 - [Generate dataset](#generate-dataset)
   * [Make videos with changing light conditions](#generate-dataset)
   * [Extract several frames for each card](#sub-heading)
-    + [Sub-sub-heading](#sub-sub-heading)
+  * [Download differents backgrounds](#download-background)
+  * [Apply image transformations to each cards and put it randomly in randomly backgrounds](#augmentation)
+
 - [Training](#training)
-  * [Sub-heading](#sub-heading-1)
+  * [Select proper model, depending in the application](#select-model)
+  * [Modify .config and choose hyperparameters](#modify-config)
     + [Sub-sub-heading](#sub-sub-heading-1)
 - [Heading](#heading-2)
   * [Sub-heading](#sub-heading-2)
@@ -54,15 +57,15 @@ source .bashrc
 ## Generate dataset <a name="generate-dataset"></a>
 
 
-  ### 1.1- Make videos with changing light conditions <a name="generate-dataset"></a>
+  ### 1.1- Make videos with changing light conditions <a name="videos"></a>
 
 In order to generate a useful dataset, we need a big amount of representative data.  Hence, one approach to this is to make videos for each card while changing light conditions. Then, we can quickly generate several pictures for each card.  
 
-  ### 1.2- Extract card image for each frame <a name="generate-dataset"></a>
+  ### 1.2- Extract card image for each frame <a name="extract-card"></a>
   
 To make the images more realistic, we have to change the background. We extract the card pixels from each image using Opencv.
 
-  ### 1.3- Download differents backgrounds <a name="generate-dataset"></a>
+  ### 1.3- Download differents backgrounds <a name="download-background"></a>
   
 We download different background from the web
 
@@ -74,7 +77,7 @@ We apply transformations such as traslation, rotation, perspective change, size 
 For train the model we use Tensorflow Object Detection API. 
 With the images and their corresponding labels we genearte a .record file.
 
-  ### 2.1 Select proper model, depending in the application  <a name="generate-dataset"></a>
+  ### 2.1 Select proper model, depending in the application  <a name="select-model"></a>
   
 Once we have .record file we are ready to select a model. 
 All the official tensorflow model are listed in the [zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
@@ -83,7 +86,7 @@ After try with several models we decide to keep only two:
  - **Faster-RCNN-inception-v2**: for "high-accuracy" application
  - **SSD-Mobilenet-v2**:  for "real-time" smartphone application
 
-  ### 2.2 Modify .config and choose hyperparameters
+  ### 2.2 Modify .config and choose hyperparameters <a name="modify-config"></a>
 To make the model working we have modify `pipeline.config`.
 
  - First, we change the number of classes in `num_classes: N`
