@@ -1,5 +1,6 @@
 # CardDetection
 
+## Installation
 
 First we create a virtual environment with conda 
 ```
@@ -33,4 +34,12 @@ then
 ```
 source .bashrc
 ```
+
+## Project
+
+1- Generate dataset
+
+2- Training
+
+3- Evaluate
 
