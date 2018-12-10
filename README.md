@@ -1,5 +1,17 @@
 # CardDetection
 
+- [Installation](#heading)
+- [Generate dataset](#heading)
+  * [Make videos with changing light conditions](#sub-heading)
+  * [Extract several frames for each card](#sub-heading)
+    + [Sub-sub-heading](#sub-sub-heading)
+- [Heading](#heading-1)
+  * [Sub-heading](#sub-heading-1)
+    + [Sub-sub-heading](#sub-sub-heading-1)
+- [Heading](#heading-2)
+  * [Sub-heading](#sub-heading-2)
+    + [Sub-sub-heading](#sub-sub-heading-2)
+
 ## Installation
 
 First we create a virtual environment with conda 
@@ -52,13 +64,4 @@ source .bashrc
 3- Evaluate
   3.1 
 
-- [Generate dataset](#heading)
-  * [Make videos with changing light conditions](#sub-heading)
-  * [Extract several frames for each card](#sub-heading)
-    + [Sub-sub-heading](#sub-sub-heading)
-- [Heading](#heading-1)
-  * [Sub-heading](#sub-heading-1)
-    + [Sub-sub-heading](#sub-sub-heading-1)
-- [Heading](#heading-2)
-  * [Sub-heading](#sub-heading-2)
-    + [Sub-sub-heading](#sub-sub-heading-2)
+
