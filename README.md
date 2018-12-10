@@ -39,7 +39,16 @@ source .bashrc
 
 1- Generate dataset
 
-2- Training
+  1.1- Make videos with changing light conditions
+  1.2- Extract several frames for each card
+  1.3- Download differents backgrounds
+  1.4- Apply image transformations to each cards and put it randomly in randomly backgrounds
 
+2- Training
+  2.1 Select proper model, depending in the application 
+  2.2 Choose hyperparameters
+  2.3 Train  !
+  
 3- Evaluate
+  3.1 
 
