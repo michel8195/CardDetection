@@ -1,6 +1,11 @@
 # CardDetection
 
-![GitHub Logo](./react.png)
+<p align="center">
+  <img src="assets/image0.jpg" height="240" />
+  <img src="assets/image1.jpg" height="240" />
+  <img src="assets/image2.jpg" height="240" />
+</p>
+
 
 - [Installation](#Installation)
 
@@ -31,7 +36,7 @@ source activate venv
 ```
 Once inside, install al the requirements 
 
-```
+```file:///home/michel/Documents/GitHub/CardDetection/assets/bg_1.jpg
 pip install -r requirements.txt
 ```
 and create a new kernel with this environment
@@ -63,20 +68,40 @@ source .bashrc
 
 In order to generate a useful dataset, we need a big amount of representative data.  Hence, one approach to this is to make videos for each card while changing light conditions. Then, we can quickly generate several pictures for each card.  
 
+<p align="center">
+  <img src="assets/6c.gif" height="240" />
+</p>
+
   ### 1.2- Extract card image for each frame <a name="extract-card"></a>
   
 To make the images more realistic, we have to change the background. We extract the card pixels from each image using Opencv.
+
+<p align="center">
+  <img src="assets/6c_1.png" height="240" />
+  <img src="assets/6c_2.png" height="240" />
+  <img src="assets/6c_3.png" height="240" />
+</p>
 
   ### 1.3- Download differents backgrounds <a name="download-background"></a>
   
 We download different background from the web
 
+<p align="center">
+  <img src="assets/bg_1.jpg" height="140" />
+  <img src="assets/bg_2.jpg" height="140" />
+</p>
+
   ### 1.4- Apply image transformations to each cards and put it randomly in randomly backgrounds <a name="generate-dataset"></a>
 
 We apply transformations such as traslation, rotation, perspective change, size and noise to each images. Then we choose randomly some images and one background and put it together
 
+<p align="center">
+  <img src="assets/scene1.png" height="300" />
+  <img src="assets/scene2.png" height="300" />
+</p>
+
 ## 2- Training <a name="training"></a>
-For train the model we use Tensorflow Object Detection API. 
+For train the model we use [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). 
 With the images and their corresponding labels we genearte a .record file.
 
   ### 2.1 Select proper model, depending in the application  <a name="select-model"></a>
@@ -98,8 +123,8 @@ To make the model working we have modify `pipeline.config`.
 
 Previous changes are enough to start training. However, we can modify some hyperparameters to customize our training. For example, we can tune the *learning rate* and the  *batch size*
 
- - Decrease **learning rate** always tend to decrease training loss but requires more step
- - **Batch size** define how many examples you use in each iteration.  You should reduce it if you are leading with RAM problems.
+ - Decrease **learning rate** always tend to decrease training loss but requires more step to converge
+ - **Batch size** define how many examples you use in each iteration.  You should reduce it if you are leading with RAM issues.
 
   
   ### 2.3 Train  !
